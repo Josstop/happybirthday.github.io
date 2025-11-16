@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- Audio para la canción -->
+    <audio id="birthdaySong" loop>
+        <source src="https://www.youtube.com/embed/LfvuOjT2_ZI?autoplay=1" type="audio/mpeg">
+    </audio>
+
+    <!-- Botón para reproducir música -->
+    <div class="music-player">
+        <button id="playButton">🎵 Reproducir Música</button>
+        <button id="pauseButton">⏸️ Pausar</button>
+    </div>
+
     <div class="container">
-        <!-- Sección de encabezado con confeti -->
+       
         <header class="header">
-            <div class="confetti"></div>
-            <div class="confetti"></div>
-            <div class="confetti"></div>
-            <div class="confetti"></div>
-            <div class="confetti"></div>
             <div class="confetti"></div>
             <div class="confetti"></div>
             <div class="confetti"></div>
@@ -42,7 +48,6 @@
                     <p class="poem-line">te encontré como quien encuentra un santo en medio del camino:</p>
                     <p class="poem-line">sin esperarlo, sin pedirlo,</p>
                     <p class="poem-line">pero necesitando justo esa paz que traías en el alma.</p>
-                
                     
                     <p class="poem-line space-above">Que este día te sea bendito,</p>
                     <p class="poem-line">que el ángel que te cuida te hable bajito</p>
@@ -67,73 +72,98 @@
             </div>
         </section>
 
-        <!-- Sección de galería de fotos -->
+      
         <section class="gallery-section">
-            <h2 class="section-title">Nuestros momentos especiales</h2>
-            <div class="gallery">
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+            <h2 class="section-title">Nuestros Momentos Especiales</h2>
+            
+            <!-- Imágenes distribuidas por la pantalla -->
+            <div class="static-gallery">
+                <!-- Imagen 1 - Superior Izquierda -->
+                <div class="static-photo photo-1">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/300x300/ff0000/000000?text=Foto+1" alt="Momento especial 1" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Recuerdo Especial</span>
+                        </div>
                     </div>
                 </div>
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+
+                <!-- Imagen 2 - Superior Derecha -->
+                <div class="static-photo photo-2">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/350x250/ff0000/000000?text=Foto+2" alt="Momento especial 2" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Día Inolvidable</span>
+                        </div>
                     </div>
                 </div>
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+
+                
+                <div class="static-photo photo-3">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/250x350/ff0000/000000?text=Foto+3" alt="Momento especial 3" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Sonrisas</span>
+                        </div>
                     </div>
                 </div>
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+
+                
+                <div class="static-photo photo-4">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/400x300/ff0000/000000?text=Foto+4" alt="Momento especial 4" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Aventuras</span>
+                        </div>
                     </div>
                 </div>
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+
+                <!-- pq andas wachando mi codigo? -->
+                <div class="static-photo photo-5">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/300x400/ff0000/000000?text=Foto+5" alt="Momento especial 5" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Celebración</span>
+                        </div>
                     </div>
                 </div>
-                <div class="photo-frame animate-bounce">
-                    <div class="photo-placeholder">
-                        <span>+ Agregar foto</span>
-                        <input type="file" class="photo-input" accept="image/*">
+
+                
+                <div class="static-photo photo-6">
+                    <div class="photo-frame-static">
+                        <img src="https://via.placeholder.com/350x350/ff0000/000000?text=Foto+6" alt="Momento especial 6" class="gallery-img">
+                        <div class="photo-overlay">
+                            <span>Amor</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de deseos -->
+        
         <section class="wishes-section">
-            <h2 class="section-title">Mis deseos para ti</h2>
+            <h2 class="section-title">Mis Deseos Para Ti</h2>
             <div class="wishes-container">
                 <div class="wish-card animate-slide-in-left">
-                    <h3>Salud</h3>
+                    <h3>❤️ Salud</h3>
                     <p>Que tengas mucha salud para disfrutar cada momento.</p>
                 </div>
                 <div class="wish-card animate-slide-in-right">
-                    <h3>Felicidad</h3>
+                    <h3>😊 Felicidad</h3>
                     <p>Que la alegría te acompañe todos los días de tu vida.</p>
                 </div>
                 <div class="wish-card animate-slide-in-left">
-                    <h3>Amor</h3>
+                    <h3>💕 Amor</h3>
                     <p>Que estés siempre rodeado de personas que te quieren.</p>
                 </div>
                 <div class="wish-card animate-slide-in-right">
-                    <h3>Éxito</h3>
+                    <h3>🎯 Éxito</h3>
                     <p>Que cumplas todos tus sueños y metas.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sección final con pastel animado -->
+        
         <section class="cake-section">
             <div class="cake animate-cake">
                 <div class="plate"></div>
@@ -152,8 +182,7 @@
         </section>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
-
 
