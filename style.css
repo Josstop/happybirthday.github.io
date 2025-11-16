@@ -1,0 +1,516 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Animaciones */
+@keyframes pop {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100px) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@keyframes cakeAppear {
+    0% { transform: scale(0) rotate(-180deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes flame {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes heartFloat {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Clases de animación */
+.animate-pop {
+    animation: pop 1s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 1s ease-out;
+}
+
+.animate-cake {
+    animation: cakeAppear 2s ease-out;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #ff4081;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Confeti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: #ff4081;
+    top: -20px;
+    animation: confettiFall 5s linear infinite;
+}
+
+.confetti:nth-child(2) {
+    left: 10%;
+    background: #4caf50;
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+}
+
+.confetti:nth-child(3) {
+    left: 20%;
+    background: #2196f3;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+.confetti:nth-child(4) {
+    left: 30%;
+    background: #ffeb3b;
+    animation-delay: 1.5s;
+    animation-duration: 5.5s;
+}
+
+.confetti:nth-child(5) {
+    left: 40%;
+    background: #9c27b0;
+    animation-delay: 2s;
+    animation-duration: 6.5s;
+}
+
+.confetti:nth-child(6) {
+    left: 50%;
+    background: #ff9800;
+    animation-delay: 2.5s;
+    animation-duration: 7.5s;
+}
+
+.confetti:nth-child(7) {
+    left: 60%;
+    background: #00bcd4;
+    animation-delay: 3s;
+    animation-duration: 5s;
+}
+
+.confetti:nth-child(8) {
+    left: 70%;
+    background: #e91e63;
+    animation-delay: 3.5s;
+    animation-duration: 6s;
+}
+
+.confetti:nth-child(9) {
+    left: 80%;
+    background: #8bc34a;
+    animation-delay: 4s;
+    animation-duration: 7s;
+}
+
+.confetti:nth-child(10) {
+    left: 90%;
+    background: #ff5722;
+    animation-delay: 4.5s;
+    animation-duration: 5.5s;
+}
+
+/* Sección del poema */
+.poem-section {
+    margin: 60px 0;
+    padding: 40px 20px;
+}
+
+.poem-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid #ffebee;
+}
+
+.poem-title {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.poem {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #5d4037;
+    text-align: center;
+}
+
+.poem-line {
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+.poem-line:nth-child(1) { animation-delay: 0.2s; }
+.poem-line:nth-child(2) { animation-delay: 0.4s; }
+.poem-line:nth-child(3) { animation-delay: 0.6s; }
+.poem-line:nth-child(4) { animation-delay: 0.8s; }
+.poem-line:nth-child(5) { animation-delay: 1.0s; }
+.poem-line:nth-child(6) { animation-delay: 1.2s; }
+.poem-line:nth-child(7) { animation-delay: 1.4s; }
+.poem-line:nth-child(8) { animation-delay: 1.6s; }
+.poem-line:nth-child(9) { animation-delay: 1.8s; }
+.poem-line:nth-child(10) { animation-delay: 2.0s; }
+.poem-line:nth-child(11) { animation-delay: 2.2s; }
+.poem-line:nth-child(12) { animation-delay: 2.4s; }
+.poem-line:nth-child(13) { animation-delay: 2.6s; }
+.poem-line:nth-child(14) { animation-delay: 2.8s; }
+.poem-line:nth-child(15) { animation-delay: 3.0s; }
+.poem-line:nth-child(16) { animation-delay: 3.2s; }
+.poem-line:nth-child(17) { animation-delay: 3.4s; }
+.poem-line:nth-child(18) { animation-delay: 3.6s; }
+.poem-line:nth-child(19) { animation-delay: 3.8s; }
+.poem-line:nth-child(20) { animation-delay: 4.0s; }
+.poem-line:nth-child(21) { animation-delay: 4.2s; }
+.poem-line:nth-child(22) { animation-delay: 4.4s; }
+.poem-line:nth-child(23) { animation-delay: 4.6s; }
+.poem-line:nth-child(24) { animation-delay: 4.8s; }
+
+.space-above {
+    margin-top: 25px;
+}
+
+/* Corazones flotantes */
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: #ff4081;
+    animation: heartFloat 6s ease-in infinite;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+/* Galería */
+.gallery-section {
+    margin: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff4081;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-frame {
+    aspect-ratio: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.photo-frame:hover {
+    transform: scale(1.05);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.photo-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Sección de deseos */
+.wishes-section {
+    margin: 80px 0;
+}
+
+.wishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.wish-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.wish-card h3 {
+    color: #ff4081;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.wish-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Pastel */
+.cake-section {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+}
+
+.plate {
+    width: 240px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.layer {
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.layer-bottom {
+    width: 180px;
+    height: 60px;
+    background: #ff8a80;
+    bottom: 20px;
+}
+
+.layer-middle {
+    width: 150px;
+    height: 50px;
+    background: #ff5252;
+    bottom: 80px;
+}
+
+.layer-top {
+    width: 120px;
+    height: 40px;
+    background: #d32f2f;
+    bottom: 130px;
+}
+
+.icing {
+    width: 120px;
+    height: 20px;
+    background: #f8bbd0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drip {
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background: #f8bbd0;
+    border-radius: 0 0 15px 15px;
+}
+
+.drip1 {
+    bottom: 150px;
+    left: 45%;
+}
+
+.drip2 {
+    bottom: 145px;
+    left: 55%;
+}
+
+.drip3 {
+    bottom: 148px;
+    left: 65%;
+}
+
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #ffeb3b;
+    bottom: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background: #ff9800;
+    border-radius: 50% 50% 20% 20%;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flame 0.5s ease-in-out infinite alternate;
+}
+
+.final-message {
+    font-size: 2rem;
+    color: #ff4081;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .poem {
+        font-size: 1.1rem;
+    }
+    
+    .poem-container {
+        padding: 30px 20px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .wishes-container {
+        grid-template-columns: 1fr;
+    }
+}
